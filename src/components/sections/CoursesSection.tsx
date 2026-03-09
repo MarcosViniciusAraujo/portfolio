@@ -42,7 +42,7 @@ export function CoursesSection() {
       <div className="relative">
         <button
           onClick={() => scroll("left")}
-          className={`absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-bg-card/90 border border-white/10 flex items-center justify-center transition-all duration-300 cursor-pointer ${
+          className={`absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-bg-card border border-white/10 flex items-center justify-center transition-all duration-300 cursor-pointer ${
             canScrollLeft
               ? "opacity-100 hover:border-accent-gold/30 hover:shadow-[0_0_15px_rgba(201,168,76,0.15)]"
               : "opacity-0 pointer-events-none"
@@ -54,7 +54,7 @@ export function CoursesSection() {
 
         <button
           onClick={() => scroll("right")}
-          className={`absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-bg-card/90 border border-white/10 flex items-center justify-center transition-all duration-300 cursor-pointer ${
+          className={`absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-bg-card border border-white/10 flex items-center justify-center transition-all duration-300 cursor-pointer ${
             canScrollRight
               ? "opacity-100 hover:border-accent-gold/30 hover:shadow-[0_0_15px_rgba(201,168,76,0.15)]"
               : "opacity-0 pointer-events-none"
@@ -64,19 +64,20 @@ export function CoursesSection() {
           <ChevronRight size={18} className="text-text-secondary" />
         </button>
 
-        <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-bg-primary to-transparent z-[1] pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-bg-primary to-transparent z-[1] pointer-events-none" />
+        <div className="overflow-hidden mx-5">
+          <div className="absolute left-5 top-0 bottom-0 w-6 bg-gradient-to-r from-bg-primary to-transparent z-[1] pointer-events-none" />
+          <div className="absolute right-5 top-0 bottom-0 w-6 bg-gradient-to-l from-bg-primary to-transparent z-[1] pointer-events-none" />
 
-        <div
-          ref={carouselRef}
-          onScroll={checkScroll}
-          className="flex gap-6 overflow-x-auto scrollbar-hide px-2 py-2 -mx-2 snap-x snap-mandatory"
-          style={{
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-            WebkitOverflowScrolling: "touch",
-          }}
-        >
+          <div
+            ref={carouselRef}
+            onScroll={checkScroll}
+            className="flex gap-6 overflow-x-auto scrollbar-hide py-2 snap-x snap-mandatory"
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+              WebkitOverflowScrolling: "touch",
+            }}
+          >
           {courses.map((course, index) => (
             <motion.div
               key={`${course.name}-${course.year}`}
@@ -133,6 +134,7 @@ export function CoursesSection() {
               </GlowCard>
             </motion.div>
           ))}
+          </div>
         </div>
 
         <div className="flex justify-center gap-1.5 mt-6">

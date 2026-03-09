@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, Star } from "lucide-react";
+import Image from "next/image";
 import { Section } from "@/components/layout";
 import { SectionHeading, Badge, GlowCard, Button } from "@/components/ui";
 import { projects } from "@/data/projects";
@@ -87,10 +88,11 @@ export function ProjectsSection() {
 
               {project.image && (
                 <div className="relative w-full h-40 rounded-lg overflow-hidden mb-4 bg-bg-primary/50">
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               )}

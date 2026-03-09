@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui";
 import { HeroScene } from "@/components/three";
 import { profile } from "@/data/profile";
@@ -69,14 +70,14 @@ export function HeroSection() {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <a href="#about" className="text-text-secondary/50 hover:text-accent-gold transition-colors">
+        <Link href="#about" className="text-text-secondary/50 hover:text-accent-gold transition-colors">
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           >
             <ChevronDown size={24} />
           </motion.div>
-        </a>
+        </Link>
       </motion.div>
     </section>
   );

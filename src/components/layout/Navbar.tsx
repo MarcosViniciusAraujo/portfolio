@@ -5,6 +5,7 @@ import { NAV_LINKS } from "@/lib/constants";
 import { useScrollspy } from "@/hooks";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { MobileMenu } from "./MobileMenu";
 
 export function Navbar() {
@@ -34,19 +35,19 @@ export function Navbar() {
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <a
+            <Link
               href="#hero"
               className="text-lg font-bold text-text-primary hover:text-accent-gold transition-colors"
             >
               MV<span className="text-accent-gold">.</span>
-            </a>
+            </Link>
 
             <div className="hidden md:flex items-center gap-1">
               {NAV_LINKS.map((link) => {
                 const id = link.href.replace("#", "");
                 const isActive = activeId === id;
                 return (
-                  <a
+                  <Link
                     key={link.href}
                     href={link.href}
                     className={cn(
@@ -57,7 +58,7 @@ export function Navbar() {
                     )}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 );
               })}
             </div>
