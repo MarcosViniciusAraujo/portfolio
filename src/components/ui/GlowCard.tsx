@@ -10,6 +10,7 @@ interface GlowCardProps {
   glowColor?: "gold" | "ember" | "blue";
   hover?: boolean;
   delay?: number;
+  animate?: boolean;
 }
 
 const glowColors = {
@@ -25,15 +26,16 @@ export function GlowCard({
   glowColor = "gold",
   hover = true,
   delay = 0,
+  animate = true,
 }: GlowCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay }}
+      initial={animate ? { opacity: 0, y: 30 } : false}
+      whileInView={animate ? { opacity: 1, y: 0 } : undefined}
+      viewport={animate ? { once: true, amount: 0.2 } : undefined}
+      transition={animate ? { duration: 0.5, delay } : undefined}
       className={cn(
-        "relative rounded-xl border border-white/[0.06] bg-bg-card/80 backdrop-blur-sm p-6 transition-all duration-500",
+        "relative rounded-xl border border-white/[0.06] bg-bg-card/80 backdrop-blur-sm p-6 transition-[shadow,border-color] duration-500",
         hover && glowColors[glowColor],
         className
       )}
