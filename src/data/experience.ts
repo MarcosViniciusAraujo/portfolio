@@ -13,7 +13,7 @@ export const experiences: Experience[] = [
       "Implemented **LLM observability pipelines** using Langfuse and architected event-driven AWS data infrastructure",
       "Led data integration during **Greytown Advisors' multi-billion AUM acquisition**, automating financial reconciliation and eliminating **~4 hours of manual work** daily",
     ],
-    technologies: ["Python", "AWS", "LangChain", "Langfuse", "RAG", "LLM Agents"],
+    technologies: ["Python", "AWS", "LangChain", "Langfuse", "RAG", "LLM Agents", ".NET", "C#", "SQL", "PostgreSQL", "OpenSearch", "Langfuse", "RAG", "LLM Agents"],
   },
   {
     company: "BOCOM BBM",
