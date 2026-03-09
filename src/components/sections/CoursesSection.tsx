@@ -82,7 +82,7 @@ export function CoursesSection() {
               key={`${course.name}-${course.year}`}
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
               className="snap-start"
               style={{ minWidth: CARD_WIDTH, maxWidth: CARD_WIDTH }}
@@ -90,6 +90,7 @@ export function CoursesSection() {
               <GlowCard
                 glowColor={index % 3 === 0 ? "gold" : index % 3 === 1 ? "blue" : "ember"}
                 delay={0}
+                animate={false}
                 className="flex flex-col h-full"
               >
                 <div className="flex items-start gap-3 mb-3">

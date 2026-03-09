@@ -28,6 +28,7 @@ export const profile: Profile = {
     { name: "Machine Learning", category: "ai" },
   ],
   interests: [
+    "AI",
     "Fantasy & Sci-Fi Books",
     "Video Games",
     "Open Source",
