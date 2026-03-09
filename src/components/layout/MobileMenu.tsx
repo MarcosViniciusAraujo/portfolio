@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import { NAV_LINKS } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -27,7 +28,7 @@ export function MobileMenu({ isOpen, onClose, activeId }: MobileMenuProps) {
                 const id = link.href.replace("#", "");
                 const isActive = activeId === id;
                 return (
-                  <a
+                  <Link
                     key={link.href}
                     href={link.href}
                     onClick={onClose}
@@ -39,7 +40,7 @@ export function MobileMenu({ isOpen, onClose, activeId }: MobileMenuProps) {
                     )}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 );
               })}
             </div>
