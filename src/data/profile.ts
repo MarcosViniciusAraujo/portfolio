@@ -3,6 +3,7 @@ import type { Profile } from "@/types";
 export const profile: Profile = {
   name: "Marcos Vinicius Araujo",
   tagline: "Software & AI Engineer — Building intelligent systems with code & creativity",
+  avatar: "/foto-de-perfil-oficial.jpg",
   bio: "Software & AI Engineer with 5+ years of experience building production-ready data and AI systems across software, cloud, and intelligent platforms. I develop end-to-end solutions spanning ETL pipelines, AWS-based data infrastructure, and LLM applications — including production multi-agent systems. My work includes model evaluation, LLM observability, and building scalable AI services focused on reliability and measurable business impact. When I'm not coding, you'll find me lost in fantasy worlds — whether through the pages of a great book or exploring vast digital landscapes in my favorite games.",
   location: "Rio de Janeiro, Brazil",
   socials: {

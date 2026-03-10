@@ -25,7 +25,7 @@ export const projects: Project[] = [
     title: "Guitar module with Arduino",
     description:
       "An eletric guitar mdoule that connects with guitar hero as a controller.",
-    tags: ["Arduino", "Electronics", "Music", "Guitar"],
+    tags: ["Arduino", "Electronics", "Music"],
     featured: true,
     year: 2022,
     repoUrl: "https://github.com/MarcosViniciusAraujo/puc-projeto-micro",
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     title: "Chat GPT Clone App",
     description:
         "A Chat GPT Clone App built with Vanilla JS and the OpenAI API.",
-    tags: ["React", "TypeScript", "REST API", "ChatGPT", "OpenAI"],
+    tags: ["React", "OpenAI API", "TypeScript"],
     year: 2023,
     repoUrl: "https://github.com/MarcosViniciusAraujo/chatGPT-clone",
   },
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     title: "Final Project - PUC-Rio",
     description:
       "A Study about convolutional neural networks for medical image classification.",
-    tags: ["CNN", "Research", "AI", "RESNET", "Medical Image Analysis"],
+    tags: ["CNN", "Medical Imaging", "Research"],
     featured: true,
     year: 2023,
     repoUrl: "https://github.com/MarcosViniciusAraujo/puc-rio-projeto-final",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     title: "Corona Virus Tracker",
     description:
       "A Web App for real time tracking of the COVID-19 virus around the world.",
-    tags: ["React", "TypeScript", "REST API", "Chart.js"],
+    tags: ["React", "REST API", "Chart.js"],
     featured: true,
     year: 2020,
     repoUrl: "https://github.com/MarcosViniciusAraujo/project_corona_tracker",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     title: "Crypto Price Tracker",
     description:
       "A Web App for real time tracking of the price of a crypto currency.",
-    tags: ["React", "TypeScript", "REST API", "Chart.js", "Crypto", "Bitcoin"],
+    tags: ["React", "REST API", "Crypto"],
     year: 2022,
     repoUrl: "https://github.com/MarcosViniciusAraujo/crypto-price-tracker",
   },
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     title: "Latitude 90",
     description:
       "Desktop App recreating the game Latitude 90 in Java",
-    tags: ["Java", "Game Development", "Desktop App", "Latitude 90"],
+    tags: ["Java", "Game Dev", "Desktop App"],
     year: 2021,
     repoUrl: "https://github.com/MarcosViniciusAraujo/Latitude90",
   },
