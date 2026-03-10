@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { MapPin, BookOpen, Gamepad2, Code, User } from "lucide-react";
+import { MapPin, BookOpen, Gamepad2, Code } from "lucide-react";
 import { Section } from "@/components/layout";
 import { SectionHeading, Badge, GlowCard } from "@/components/ui";
 import { profile } from "@/data/profile";
@@ -60,9 +61,22 @@ export function AboutSection() {
           className="lg:col-span-2 flex flex-col items-center lg:items-start gap-6"
         >
           <div className="relative">
-            <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-accent-gold/20 via-bg-card to-accent-blue/20 p-[2px]">
-              <div className="w-full h-full rounded-2xl bg-bg-card flex items-center justify-center overflow-hidden">
-                <User size={64} className="text-text-secondary/30" />
+            <div className="w-48 h-64 rounded-2xl bg-gradient-to-br from-accent-gold/20 via-bg-card to-accent-blue/20 p-[2px]">
+              <div className="w-full h-full rounded-2xl bg-bg-card overflow-hidden">
+                {profile.avatar ? (
+                  <Image
+                    src={profile.avatar}
+                    alt={profile.name}
+                    width={192}
+                    height={256}
+                    className="w-full h-full object-cover object-top"
+                    priority
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <Code size={64} className="text-text-secondary/30" />
+                  </div>
+                )}
               </div>
             </div>
             <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-accent-gold/10 to-accent-blue/10 blur-xl -z-10" />
